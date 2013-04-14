@@ -1,5 +1,5 @@
 angular.module('components',[])
-    .directive('simpleProgress', function(){
+    .directive('smartGauge', function(){
         return{
             restrict: 'E',
             replace: true,
