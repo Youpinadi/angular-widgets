@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="MainApp" ng-controller="MainCtrl">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular widgets</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <script src="angular-widgets.js"></script>
+    <script src="main.js"></script>
+    <link href="angular-widgets.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+
+            <a class="brand" href="index.php">Angular widgets</a>
+            <ul class="nav">
+              <li><a href="#">Smart gauge</a></li>
+              <li><a href="#">Universal player</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- Main hero unit for a primary marketing message or call to action -->
+    <div class="hero-unit">
+      <h1>Angular widgets</h1>
+      <p>Hand crafted angular directives</p>
+      <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
+
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="span4">
+        <h2>Smart gauge</h2>
+          <p>Smart gauge allows you to display a gauge, which will update automatically  and change its color depending on tresholds you have set. You can have a labbeled jauge just by setting the "label" attribute.</p>
+          <p>
+            <pre>&lt;smart-gauge<span ng-show="warningTreshold"> warning="{{ warningTreshold }}"</span><span ng-show="dangerTreshold"> danger="{{ dangerTreshold }}"</span> value="30" percent="50" <span ng-show="errorLabel">label="{{errorLabel}}"</span>&gt;</pre>
+          </p>
+          <p>
+            <input type="text" ng-model="errorLabel" placeholder="Enter a label"/>
+            <input type="text" ng-model="warningTreshold" placeholder="Enter the warning treshold" ng-init="warningTreshold = 33"/>
+            <input type="text" ng-model="dangerTreshold" placeholder="Enter the danger treshold" ng-init="dangerTreshold = 66"/>
+
+            <div class="row">
+              <simple-progress class="span4" warning="{{ warningTreshold }}"  danger="{{ dangerTreshold }}" label="{{ errorLabel }}" percent="{{ error1.percent }}" value="{{ error1.value }}"></simple-progress>
+            </div>
+            <div class="row">
+              <simple-progress class="span3" warning="{{ warningTreshold }}" danger="{{ dangerTreshold }}" label="{{ errorLabel }}" percent="{{ error2.percent }}" value="{{ error2.value }}"></simple-progress>
+            </div>
+            <div class="row">
+              <simple-progress class="span2" warning="{{ warningTreshold }}" danger="{{ dangerTreshold }}"  label="{{ errorLabel }}" percent="{{ error3.percent }}" value="{{ error3.value }}"></simple-progress>
+            </div>
+          </p>
+      </div>
+
+      <div class="span4">
+        <h2>Universal player</h2>
+        <p>Universal player is a directive that enables you to embed any player with the same simple tag.</p>
+          <p>
+            <pre>&lt;player site="dailymotion" video-id="x567" player-width="320" player-height="200" &gt;</pre>
+            <pre>&lt;player site="youtube" video-id="x567" player-width="320" player-height="200" &gt;</pre>
+          </p>
+       </div>
+
+      <div class="span4">
+        <h2>Propose me something</h2>
+        <p>Heve a clever idea for a custom tag? Send me a pull request! If i like it i'll put it oin the site.</p>
+        <p><a class="btn" href="#">View details &raquo;</a></p>
+      </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

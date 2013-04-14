@@ -1,0 +1,39 @@
+.smart-gauge
+{
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    height: 22px;
+    position: relative;
+}
+
+.smart-gauge *
+{
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+
+.smart-gauge  .btn
+{
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: bold;
+    font-size: 11px;
+    height: 22px;
+    width: 30%;
+    border-radius: 4px 0px 0px 4px;
+}
+
+.smart-gauge.with-label .progress
+{
+    display: inline-block;
+    height: 22px;
+    width: 70%;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.progress .info
+{
+    position: absolute;
+    right: 6px;
+    font-size: 11px;
+}

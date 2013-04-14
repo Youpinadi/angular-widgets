@@ -1,0 +1,14 @@
+body
+{
+    -webkit-font-smoothing: antialiased;
+}
+
+p
+{
+    text-align: left;
+}
+
+.smart-gauge
+{
+    margin-bottom: 10px;
+}
