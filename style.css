@@ -8,6 +8,11 @@ p
     text-align: left;
 }
 
+h1
+{
+    margin-bottom: 10px !important;
+}
+
 .smart-gauge
 {
     margin-bottom: 10px;

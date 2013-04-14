@@ -46,7 +46,7 @@
     <div class="row">
       <div class="span4">
         <h2>Smart gauge</h2>
-          <p>Smart gauge allows you to display a gauge, which will update automatically  and change its color depending on tresholds you have set. You can have a labbeled jauge just by setting the "label" attribute.</p>
+          <p>Smart gauge can be used in dashboards. It allows you to display a gauge, which will update automatically and change its color depending on <a href="" title="click to set warning to 33 and danger to 66" ng-click="warningTreshold=33;dangerTreshold=66;">tresholds you have set</a>. You can have a <a href="" title="click to try!" ng-click="errorLabel='label'">labbeled jauge just by setting the "label" attribute</a>. If you <a href="" title="click to try!" ng-click="warningTreshold=null;dangerTreshold=null;">don't set any warning or danger treshold, the jauge will be blue</a>.</p>
           <p>
             <pre>&lt;smart-gauge<span ng-show="warningTreshold"> warning="{{ warningTreshold }}"</span><span ng-show="dangerTreshold"> danger="{{ dangerTreshold }}"</span> value="30" percent="50" <span ng-show="errorLabel">label="{{errorLabel}}"</span>&gt;</pre>
           </p>
